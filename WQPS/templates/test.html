@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据测试</title>
+    <h2 align="center">上传的数据</h2>
+    <table border="border" align="center" width="70%" style="text-align: center">
+        <tr>
+            <th>PH</th>
+            <th>DO</th>
+            <th>NH3N</th>
+            <th>上传日期</th>
+            <th>操作</th>
+        </tr>
+        {% for waterquality in data %}
+        <tr>
+            <td>{{ waterquality.ph }}</td>
+            <td>{{ waterquality.do }}</td>
+            <td>{{ waterquality.nh3n }}</td>
+            <td>{{ waterquality.date }}</td>
+            <td>
+                <a href="delete?id={{ waterquality.id }}">删除</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</head>
+<body>
+
+</body>
+</html>

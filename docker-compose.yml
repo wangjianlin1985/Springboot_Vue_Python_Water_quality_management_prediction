@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  wqps:
+    build: ./WQPS
+    container_name: wqps
+    network_mode: host
+
+  wqms:
+    build: ./WQMS
+    container_name: wqms
+    network_mode: host
+    
+  web:
+    build: ./FrontEnd
+    container_name: web
+    network_mode: host
+  
+
+  
